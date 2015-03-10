@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!-- Bootstrap -->
+        <link href="{{ asset('./bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('./bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    </head>
+    <header>
+        <div class="page-header">
+            <h1>Bienvenue <small>sur mon site expérimental de News !</small></h1>
+        </div>
+    </header>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ path("epsi_news_home") }}">Home</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ path("fos_user_security_logout") }}">Logout</a></li>
+                            <li><a href="{{ path("fos_user_security_login") }}">Login</a></li>
+                            <li><a href="{{ path("fos_user_registration_register") }}">s'inscrire</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            {% block body %}{% endblock %}
+            {% block javascripts %}{% endblock %}
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="{{ asset('./js/jquery.min.js') }}"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="{{ asset('./bootstrap/js/bootstrap.min.js') }}"></script>
+        </div>
+    </body>
+</html>

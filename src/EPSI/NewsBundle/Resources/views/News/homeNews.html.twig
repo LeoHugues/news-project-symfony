@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="jumbotron">
+        <h1>Hello, world!</h1>
+        <p>Bienvenue sur le nouveau site de l'EPSI, symfony2, PSR2 et full responsive, codé en seulement une poignée de nuits !</br>
+            Vous pouvez dès à présent découvrire le système de news mis en place par un codeur hors paire.</br>
+        En clickant sur le bouton ci-dessous</p>
+        <p><a class="btn btn-primary btn-lg" href="{{ path("epsi_news_get") }}" role="button">EPSI News</a></p>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'EPSINewsBundle:Default:index.html.twig' %}
+
+{% block body %}
+    <div class="well">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">{{ new.title }}</div>
+            <div class="panel-body">
+                <p>{{ new.content }}</p>
+            </div>
+
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">{{ new.date | date("M D y") }}</li>
+                <li class="list-group-item">{{ new.categorie.categorieName }}</li>
+                <li class="list-group-item">
+                    {% for tag in new.tags %}
+                        #{{ tag.intitule }}
+                    {% endfor %}
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock body %}

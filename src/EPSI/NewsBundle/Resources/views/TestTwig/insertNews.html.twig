@@ -1,0 +1,14 @@
+{% extends 'EPSINewsBundle:Default:index.html.twig' %}
+
+    {% block title %}
+        Ajouter une news
+    {% endblock %}
+
+ {% block content %}
+
+<h1>Voici la page d'insertion</h1>
+    <div class="well form-block">
+        {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

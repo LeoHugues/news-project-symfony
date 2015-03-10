@@ -1,0 +1,8 @@
+{% extends 'base_news.html.twig' %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Dommage</h1>
+    <p>Vous devez être enregistré pour ajouter une news</p>
+    <p><a class="btn btn-primary btn-lg" href="{{ path("fos_user_registration_register") }}" role="button">S'inscrire</a></p>
+</div>
+{% endblock %}

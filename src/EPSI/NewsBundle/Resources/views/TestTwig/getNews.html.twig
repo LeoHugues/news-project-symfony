@@ -1,0 +1,25 @@
+{% extends 'EPSINewsBundle:Default:index.html.twig' %}
+
+    {% block title %}  
+        Les Actus
+    {% endblock %}
+        
+{% block content %}
+
+        <h1>Mes super news !</h1>
+        <p>Dernieres news parues :</p>
+
+    <div class="well">
+        {% for new in News %}
+            <div class="panel panel-default">
+                <div class="panel-heading">{{ new.title }} - {{ new.date | date("M D y") }}</div>
+                <div class="panel-body">
+                    {{ new.content }}
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+{% endblock %}
+    

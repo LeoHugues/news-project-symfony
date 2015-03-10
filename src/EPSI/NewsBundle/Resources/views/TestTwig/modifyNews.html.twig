@@ -1,0 +1,28 @@
+{% extends 'EPSINewsBundle:Default:index.html.twig' %}
+
+    {% block stylesheets %}
+        <link href="{{ asset('bundles/epsinews/css/style.css')}}" type="text/css" rel="stylesheet" />
+    {% endblock %}
+    {% block title %}
+        Modifier une news
+    {% endblock %}
+
+ {% block content %}
+
+    <h1>voici la page de modification</h1>
+    <p>Dernieres news parues :</p>
+
+<div class="well">
+    {% for new in News %}
+        <div class="news">
+            <h3>
+                {{ new.title }}
+            </h3>
+            <p>
+                {{ new.content }}
+            </p>
+        </div>
+    {% endfor %}
+</div>
+    
+{% endblock %}
